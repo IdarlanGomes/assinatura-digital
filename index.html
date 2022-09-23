@@ -11,22 +11,30 @@
     <div class="flex-row">
         <div class="wrapper">
             <canvas id="signature-pad" width="600" height="400"></canvas>
+
+            
+            <div class="botoes">
+                
+                <div class="data-btn">
+                <button id="data" onclick=data()><span> Data </span></button>
+                </div>  
+            
+                <div class="clear-btn">
+                <button id="clear"><span> Apagar </span></button>
+                </div>
+
+            </div>
+            
         </div>
        
         
     </div>
-    <div class="clear-btn">
-        <button id="clear"><span> Apagar </span></button>
-    </div>
-    <div class="data-btn">
-        <button id="data" onclick=data()><span> Data </span></button>
-    </div>
+   
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
        const date = new Date();
-       const currentYear = date.getFullYear();
-       const currentMonth = date.getMonth()
-       const currentDay = date.getDay();
+       const hoje = date.toLocaleDateString();
 
       
 
@@ -50,7 +58,7 @@
        })
 
        function data(){
-        alert("data: " + "Hoje é dia " + currentDay + " do " + currentMonth + " de " + currentYear)
+        alert("data: " + hoje)
        }
 
 

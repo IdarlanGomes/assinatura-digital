@@ -26,6 +26,12 @@ canvas#signature-pad {
     height: 100%;
     cursor: crosshair;
 }
+
+.botoes {
+   
+    display: flex;
+    justify-content: center;
+}
 button#clear {
     height: 100%;
     background: #f18b04;
